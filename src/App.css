@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainBackground {
+    background: linear-gradient(180deg, #004e92 0%, #00bcff 100%);
+    min-height: 75vh; 
+    width: 100%;
+}
+header{
+    .headerBackgorund{
+        background: linear-gradient(180deg, #00bcff 0%, #004e92 100%);
+        margin-bottom: 0;
+    }
+    min-height: 13vh;
+    color: white;
+   
+}
+footer{
+    background: linear-gradient(180deg, #00bcff 0%, #004e92 100%);
+    min-height: 15vh;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: darkblue;
+}
+
+.info{
+    color: white;
+}

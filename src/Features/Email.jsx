@@ -5,7 +5,6 @@ export const Email = ({props}) => {
 
 
     const onSubmit = (data) => {
-        console.log(data);
         props(data);
     }
 

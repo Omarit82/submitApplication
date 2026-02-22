@@ -6,8 +6,8 @@
 
 .mainBackground {
     background: linear-gradient(180deg, #004e92 0%, #00bcff 100%);
-    min-height: 75vh; 
     width: 100%;
+    min-height: 75vh;
 }
 header{
     .headerBackgorund{
@@ -30,4 +30,19 @@ a{
 
 .info{
     color: white;
+}
+.card{
+    padding: 2%;
+    color: white;
+    background-color: rgb(55, 156, 163);
+}
+
+.btn-success{
+    background-color: rgb(0, 0, 59);
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+.btn-success:hover{
+    background-color: rgb(0, 0, 29);
 }

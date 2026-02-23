@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import { Card } from "./Card";
 import Swal from 'sweetalert2';
+import 'ldrs/ring'
 
 export const Jobs = (props)=>{
     
     const [ jobs,setJobs ] = useState([]); 
+    const [loading, setLoading] = useState(true);
 
     useEffect (()=>{
         async function getJobs(){
@@ -20,14 +22,21 @@ export const Jobs = (props)=>{
                     showConfirmButton: false,
                     timer: 3000
                 });
+            }finally {
+                setLoading(false);
             }
         } 
         getJobs();
     },[])
     
     return(
-        <div className="p-3">
-            {jobs.map((job)=>(<Card url={props.url} job={job} data={props.data} key={job.id} />))}
-        </div>
+        <>
+        {loading? <div className="d-flex justify-content-center"> <l-ring size={100} color="darkblue"></l-ring></div>:
+            <div className="p-3">
+                {jobs.map((job)=>(<Card url={props.url} job={job} data={props.data} key={job.id} />))}
+            </div>
+        }
+        
+        </>
     )
 }
